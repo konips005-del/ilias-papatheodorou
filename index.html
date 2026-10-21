@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Τα Στάχυα · Boutique Cafe & Φούρνος</title>
-<meta name="description" content="Τα Στάχυα — παραδοσιακά προϊόντα φούρνου, specialty καφές και πρωινό όλη μέρα. Ηρακλέους 1, Φιξ & Σπ. Τρικούπη 12-14, Εξάρχεια.">
+<title>Τα Στάχυα · Φούρνος στα Εξάρχεια από το 1997</title>
+<meta name="description" content="Τα Στάχυα — παραδοσιακός φούρνος στα Εξάρχεια από το 1997. Πίτες, μπουγάτσα, κουλούρια και καφές. Σπύρου Τρικούπη 12-14, τηλ. 210 38 38 539.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -194,7 +194,8 @@ header.scrolled .burger span,header.scrolled .burger span::before,header.scrolle
 .book-count{font-family:var(--serif);font-size:1.05rem;min-width:150px;text-align:center;color:var(--muted)}
 .menu-note{margin-top:22px;font-size:.85rem;color:var(--muted);text-align:center}
 @media (max-width:860px){
-  .book-stage{--pw:min(420px,calc(100vw - 32px));--ph:620px}
+  .book-stage{--pw:min(420px,calc(100vw - 32px));--ph:720px}
+  .pg-items.plain li{padding:7px 0}
   .pg{padding:36px 26px 54px}
   .pg-items li{font-size:.9rem;padding:6px 0}
   .pg-head h3{font-size:1.75rem}
@@ -307,6 +308,53 @@ header.hide{transform:translateY(-110%)}
   .masonry{columns:2;column-gap:10px}
   .masonry button{margin-bottom:10px}
 }
+/* ---------- bakery hero ---------- */
+.hero{background:radial-gradient(90% 70% at 85% 20%,#2C4C3D 0%,var(--green) 45%,#132219 100%);align-items:center}
+.hero::after{display:none}
+.hero .wrap.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,6vw,90px);align-items:center;padding-top:130px;padding-bottom:90px}
+.hero h1{font-size:clamp(2.8rem,5.6vw,5.4rem)}
+.hero-collage{position:relative;height:min(72vh,620px);min-height:440px;opacity:0;animation:fadeUp 1.2s cubic-bezier(.2,.7,.2,1) .4s forwards}
+.hero-collage img{position:absolute;object-fit:cover;border-radius:var(--r);box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.hero-collage .c1{left:0;top:5%;width:58%;height:80%}
+.hero-collage .c2{right:0;top:0;width:38%;height:40%}
+.hero-collage .c3{right:5%;bottom:0;width:46%;height:46%;border:6px solid var(--green)}
+.seal{position:absolute;left:46%;top:-5%;width:124px;height:124px;display:grid;place-items:center;color:var(--wheat-2);z-index:3}
+.seal svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 24s linear infinite}
+.seal text{font:700 8.6px var(--sans);fill:currentColor}
+.seal span{font-size:1.2rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hours{list-style:none;margin:18px 0 36px}
+.hours li{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.hours li span:last-child{font-family:var(--serif);font-size:1.12rem;color:rgba(255,255,255,.9)}
+.hours li.today,.hours li.today span:last-child{color:var(--wheat-2);font-weight:700}
+.hours.mini{margin:14px 0 0}
+.hours.mini li{padding:7px 0;font-size:.9rem;border-color:rgba(255,255,255,.08)}
+.hours.mini li span:last-child{font-size:.98rem}
+.open-pill{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.08);font-size:.86rem;font-weight:600}
+.open-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:#5BD38A;box-shadow:0 0 0 4px rgba(91,211,138,.22)}
+.open-pill.closed::before{background:#E07A5F;box-shadow:0 0 0 4px rgba(224,122,95,.22)}
+.review-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:left}
+.review-row .score{text-align:center}
+.rq{background:var(--paper);border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;box-shadow:0 1px 0 var(--line)}
+.rq blockquote{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.35}
+.rq figcaption{font-size:.85rem;color:var(--muted)}
+.loc-single{display:grid;grid-template-columns:1.3fr 1fr;margin-top:54px}
+.loc-single iframe{height:100%;min-height:440px}
+.pg-items.plain li{display:block;padding:9px 0;border-bottom:1px dashed rgba(28,34,30,.14)}
+.pg-quotes{display:flex;flex-direction:column;gap:26px;margin:auto 0}
+.pg-quotes blockquote{font-family:var(--serif);font-style:italic;font-size:1.3rem;line-height:1.4;text-align:center}
+@media (max-width:980px){
+  .hero .wrap.hero-grid{grid-template-columns:1fr;padding-bottom:70px}
+  .hero-collage{height:440px;min-height:0}
+  .review-row{grid-template-columns:1fr 1fr}
+  .loc-single{grid-template-columns:1fr}
+  .loc-single iframe{min-height:280px}
+}
+@media (max-width:600px){
+  .hero-collage{height:360px}
+  .seal{width:96px;height:96px;left:40%}
+  .review-row{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -328,62 +376,73 @@ header.hide{transform:translateY(-110%)}
           <ellipse cx="16.4" cy="17" rx="2" ry="4" transform="rotate(-50 16.4 17)"/>
         </g>
       </svg>
-      <span><b>Τα Στάχυα</b><small>Boutique Cafe</small></span>
+      <span><b>Τα Στάχυα</b><small>Φούρνος · Εξάρχεια</small></span>
     </a>
     <ul class="menu" id="menu">
       <li><a href="#story">Ιστορία</a></li>
-      <li><a href="#bakery">Φούρνος</a></li>
-      <li><a href="#breakfast">Πρωινό</a></li>
+      <li><a href="#bakery">Πίτες</a></li>
       <li><a href="#menu-list">Κατάλογος</a></li>
+      <li><a href="#hours">Ωράριο</a></li>
       <li><a href="#gallery">Γκαλερί</a></li>
-      <li><a href="#visit">Καταστήματα</a></li>
+      <li><a href="#visit">Επικοινωνία</a></li>
     </ul>
-    <a href="tel:+302114104407" class="btn btn-gold">211 41 04 407</a>
+    <a href="tel:+302103838539" class="btn btn-gold">210 38 38 539</a>
     <button class="burger" id="burger" aria-label="Μενού" aria-expanded="false"><span></span></button>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-bg" role="img" aria-label="Big breakfast με αυγά, λουκάνικο και τοστ"></div>
-  <div class="wrap">
-    <span class="eyebrow">Φούρνος · Καφές · Πρωινό όλη μέρα</span>
-    <h1>Το ψωμί της γειτονιάς, <em>με την καρδιά μας.</em></h1>
-    <p>Παραδοσιακές πίτες και αρτοσκευάσματα, καφές που φτιάχνεται σωστά και γενναιόδωρα πρωινά, κάθε μέρα στον Φιξ και στα Εξάρχεια.</p>
-    <div class="hero-ctas">
-      <a href="#menu-list" class="btn btn-gold">Δείτε τον κατάλογο →</a>
-      <a href="#visit" class="btn btn-ghost">Πού θα μας βρείτε</a>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Παραδοσιακός φούρνος · Εξάρχεια</span>
+      <h1>Πίτες από τον φούρνο, <em>από το 1997.</em></h1>
+      <p>Τραγανό φύλλο, γενναιόδωρες γεμίσεις και η θρυλική μας ζαμπονοτυρόπιτα. Στη Σπύρου Τρικούπη, λίγα βήματα από την πλατεία Εξαρχείων.</p>
+      <div class="hero-ctas">
+        <a href="#menu-list" class="btn btn-gold">Δείτε τον κατάλογο →</a>
+        <a href="#visit" class="btn btn-ghost">Πού θα μας βρείτε</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong><span data-count="4,7">4,7</span> <span class="stars">★</span></strong>335 κριτικές Google</div>
+        <div><strong>από <span data-count="1997">1997</span></strong>στα Εξάρχεια</div>
+        <div><strong>από <span data-count="2">2</span> €</strong>οι πίτες μας</div>
+      </div>
     </div>
-    <div class="hero-meta">
-      <div><strong><span data-count="4,9">4,9</span> <span class="stars">★</span></strong>585 κριτικές Google</div>
-      <div><strong><span data-count="5">5</span> χρόνια</strong>στη γειτονιά του Φιξ</div>
-      <div><strong><span data-count="2">2</span></strong>καταστήματα στην Αθήνα</div>
+    <div class="hero-collage" aria-hidden="true">
+      <img class="c1" src="images/pie-display.jpg" alt="">
+      <img class="c2" src="images/croissants.jpg" alt="">
+      <img class="c3" src="images/spanakopita.jpg" alt="">
+      <div class="seal">
+        <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <text><textPath href="#circ" textLength="286">ΤΑ ΣΤΑΧΥΑ · ΕΞΑΡΧΕΙΑ · ΑΠΟ ΤΟ 1997 ·</textPath></text></svg>
+        <span>✦</span>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Σπανακόπιτα</span><span>Κουλούρι</span><span>Freddo Espresso</span><span>Big Breakfast</span><span>Pancakes</span><span>Κρουασάν</span><span>Τυρόπιτα</span><span>Φρέσκος χυμός</span>
-    <span>Σπανακόπιτα</span><span>Κουλούρι</span><span>Freddo Espresso</span><span>Big Breakfast</span><span>Pancakes</span><span>Κρουασάν</span><span>Τυρόπιτα</span><span>Φρέσκος χυμός</span>
+    <span>Ζαμπονοτυρόπιτα</span><span>Μπουγάτσα</span><span>Σπανακόπιτα</span><span>Κοτόπιτα</span><span>Κουλούρι</span><span>Τυρόπιτα</span><span>Χορτόπιτα</span><span>Κρουασάν</span>
+    <span>Ζαμπονοτυρόπιτα</span><span>Μπουγάτσα</span><span>Σπανακόπιτα</span><span>Κοτόπιτα</span><span>Κουλούρι</span><span>Τυρόπιτα</span><span>Χορτόπιτα</span><span>Κρουασάν</span>
   </div>
 </div>
 
 <section class="section" id="story">
   <div class="wrap story">
     <div class="story-media reveal">
-      <img class="a" src="images/team.jpg" alt="Η ομάδα των Σταχυών έξω από το κατάστημα" loading="lazy">
-      <img class="b" src="images/terrace.jpg" alt="Το τραπεζάκι δίπλα στο παράθυρο" loading="lazy">
-      <div class="badge"><div><b data-count="5">5</b>χρόνια<br>Φιξ</div></div>
+      <img class="a" src="images/tray-crowd.jpg" alt="Ταψιά με φρέσκες πίτες" loading="lazy">
+      <img class="b" src="images/stachya-card.jpg" alt="Αρτοσκευάσματα με την κάρτα των Σταχυών" loading="lazy">
+      <div class="badge"><div>από το<b data-count="1997">1997</b></div></div>
     </div>
     <div class="reveal">
       <span class="eyebrow">Η ιστορία μας</span>
-      <h2>Ένας φούρνος που έγινε <em>στέκι.</em></h2>
-      <p class="lead">Τα Στάχυα ξεκίνησαν από τα Εξάρχεια, με παραδοσιακά προϊόντα φούρνου φτιαγμένα όπως παλιά. Στις 9 Ιουνίου 2020 ανοίξαμε το Boutique Cafe στην Ηρακλέους 1, στον Φιξ — και από τότε η γειτονιά έχει ένα μέρος για καφέ, πρωινό και κουβέντα.</p>
-      <p class="lead">Είμαστε οικογενειακή επιχείρηση. Θα μας βρείτε πίσω από τον πάγκο κάθε μέρα, να σας φτιάχνουμε τον καφέ σας όπως τον θέλετε.</p>
+      <h2>Ο φούρνος της <em>γειτονιάς.</em></h2>
+      <p class="lead">Τα Στάχυα άνοιξαν το 1997 στη Σπύρου Τρικούπη 12-14, στην καρδιά των Εξαρχείων. Από τότε ο φούρνος ζυμώνει, ανοίγει φύλλο και ψήνει καθημερινά για φοιτητές, γείτονες, νυχτοπερπατητές και όποιον περάσει από την πλατεία.</p>
+      <p class="lead">Είμαστε οικογενειακός φούρνος, του Ηλία Παπαθεοδώρου. Κρατάμε τις παραδοσιακές συνταγές και τις τιμές σε επίπεδο που ταιριάζει σε κάθε τσέπη.</p>
       <div class="pillars">
-        <div><b>Φρέσκα, κάθε μέρα</b><small>Πίτες, κουλούρια και αρτοσκευάσματα από τον φούρνο μας.</small></div>
-        <div><b>Πρωινό όλη μέρα</b><small>Από ομελέτες μέχρι pancakes, όποια ώρα κι αν ξυπνήσετε.</small></div>
-        <div><b>Τίμιες τιμές</b><small>Espresso από 1,50 € και πλούσια πιάτα από 4 €.</small></div>
+        <div><b>Από το 1997</b><small>Σχεδόν τριάντα χρόνια στην ίδια γωνιά των Εξαρχείων.</small></div>
+        <div><b>Πίτες από 2 €</b><small>Ποιότητα φούρνου σε τιμές γειτονιάς.</small></div>
+        <div><b>Πάντα ζεστά</b><small>Φρέσκα ταψιά βγαίνουν από τον φούρνο όλη μέρα.</small></div>
       </div>
     </div>
   </div>
@@ -393,40 +452,19 @@ header.hide{transform:translateY(-110%)}
   <div class="wrap">
     <div class="head-row reveal">
       <div>
-        <span class="eyebrow">Ο φούρνος</span>
+        <span class="eyebrow">Οι πίτες μας</span>
         <h2>Παραδοσιακές γεύσεις, <em>ζεστές από τον φούρνο.</em></h2>
       </div>
-      <p class="lead">Χειροποίητες πίτες με τραγανό φύλλο, κουλούρια με σουσάμι και αφράτα κρουασάν. Για να τα πάρετε μαζί σας ή να τα απολαύσετε με τον καφέ σας.</p>
+      <p class="lead">Χειροποίητες πίτες με τραγανό φύλλο, μπουγάτσα με κρέμα, κουλούρια με σουσάμι και αφράτα κρουασάν. Για να τα πάρετε στο χέρι ή να τα απολαύσετε με έναν καφέ.</p>
     </div>
     <div class="bento">
-      <figure class="tile t-big reveal"><img src="images/spanakopita.jpg" alt="Σπανακόπιτα" loading="lazy"><figcaption><b>Σπανακόπιτα</b><small>Χειροποίητο φύλλο, σπανάκι & φέτα</small></figcaption></figure>
-      <figure class="tile t-tall reveal"><img src="images/koulouri.jpg" alt="Κουλούρια Θεσσαλονίκης" loading="lazy"><figcaption><b>Κουλούρια</b><small>Με σουσάμι, κάθε πρωί</small></figcaption></figure>
+      <figure class="tile t-big reveal"><img src="images/pie-cut.jpg" alt="Σπανακόπιτα σε κομμάτια" loading="lazy"><figcaption><b>Σπανακόπιτα & χορτόπιτα</b><small>Χειροποίητο φύλλο, φρέσκα χόρτα & φέτα</small></figcaption></figure>
+      <figure class="tile t-tall reveal"><img src="images/ham-pies.jpg" alt="Ζαμπονοτυρόπιτες" loading="lazy"><figcaption><b>Ζαμπονοτυρόπιτα</b><small>Η θρυλική μας, εδώ και χρόνια</small></figcaption></figure>
       <figure class="tile reveal"><img src="images/croissants.jpg" alt="Κρουασάν" loading="lazy"><figcaption><b>Κρουασάν</b><small>Βουτύρου & σοκολάτας</small></figcaption></figure>
-      <figure class="tile reveal"><img src="images/pie-slice.jpg" alt="Πίτα με λαχανικά και τυρί" loading="lazy"><figcaption><b>Πίτες ημέρας</b><small>Αλμυρές, σε μεγάλα κομμάτια</small></figcaption></figure>
-      <figure class="tile t-wide reveal"><img src="images/display.jpg" alt="Η βιτρίνα του φούρνου" loading="lazy"><figcaption><b>Η βιτρίνα μας</b><small>Κάθε μέρα κάτι καινούριο</small></figcaption></figure>
+      <figure class="tile reveal"><img src="images/koulouri.jpg" alt="Κουλούρια" loading="lazy"><figcaption><b>Κουλούρια</b><small>Με σουσάμι, κάθε πρωί</small></figcaption></figure>
+      <figure class="tile t-wide reveal"><img src="images/display.jpg" alt="Η βιτρίνα του φούρνου" loading="lazy"><figcaption><b>Η βιτρίνα μας</b><small>Κάθε μέρα γεμάτη, κάθε μέρα κάτι καινούριο</small></figcaption></figure>
       <figure class="tile reveal"><img src="images/bougatsa.jpg" alt="Πιτάκια με ντομάτα και τυρί" loading="lazy"><figcaption><b>Πιτάκια</b><small>Με ντομάτα & τυρί</small></figcaption></figure>
       <figure class="tile reveal"><img src="images/pies-sesame.jpg" alt="Πίτες με σουσάμι" loading="lazy"><figcaption><b>Κουρού</b><small>Με σουσάμι</small></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="section breakfast" id="breakfast">
-  <div class="wrap bf-grid">
-    <div class="reveal">
-      <span class="eyebrow">Breakfast · Served all day</span>
-      <h2>Πρωινό, <em>όποια ώρα θέλετε.</em></h2>
-      <p class="lead">Πλούσια πιάτα με αυγά, μπέικον, λουκάνικο και φρεσκοστυμμένο χυμό πορτοκάλι — σερβιρισμένα στα αγαπημένα μας πορσελάνινα πιάτα.</p>
-      <ul class="bf-list">
-        <li><b>BIG Breakfast</b><span class="price">7,50 €</span><small>Ομελέτα 3 αυγών, λουκάνικο, μπέικον, τοστ με τυρί, ντοματίνια, φρέσκος χυμός πορτοκάλι</small></li>
-        <li><b>Pancake Breakfast</b><span class="price">8,50 €</span><small>Pancakes, 2 αυγά, λουκάνικο, μπέικον, τυρί, φρέσκος χυμός πορτοκάλι</small></li>
-        <li><b>English Breakfast</b><span class="price">8,90 €</span><small>2 αυγά, λουκάνικο, μπέικον, φασόλια, τυρί, τσάι ή καφές φίλτρου</small></li>
-      </ul>
-      <a href="#menu-list" class="btn btn-gold">Όλος ο κατάλογος →</a>
-    </div>
-    <div class="bf-photos reveal">
-      <img class="p1" src="images/breakfast-big.jpg" alt="BIG Breakfast" loading="lazy">
-      <img class="p2" src="images/pancake-tower.jpg" alt="Pancakes" loading="lazy">
-      <img class="p3" src="images/coffee.jpg" alt="Καφές και φρέσκος χυμός" loading="lazy">
     </div>
   </div>
 </section>
@@ -438,16 +476,14 @@ header.hide{transform:translateY(-110%)}
         <span class="eyebrow">Κατάλογος</span>
         <h2>Τι θα πάρετε <em>σήμερα;</em></h2>
       </div>
-      <p class="lead">Οι τιμές καφέ εμφανίζονται ως <b>take away / σερβίρισμα</b>.</p>
+      <p class="lead">Ξεφυλλίστε τον κατάλογό μας: πατήστε πάνω στη σελίδα, σύρετε ή χρησιμοποιήστε τα βελάκια.</p>
     </div>
     <div class="book-index reveal" id="bookIndex">
-      <button class="chip" data-page="2">Καφές</button>
-      <button class="chip" data-page="3">Αναψυκτικά</button>
-      <button class="chip" data-page="4">Πρωινό</button>
-      <button class="chip" data-page="5">Pancakes</button>
-      <button class="chip" data-page="6">Σάντουιτς</button>
-      <button class="chip" data-page="7">Burger & Πίτσα</button>
-      <button class="chip" data-page="8">Σαλάτες</button>
+      <button class="chip" data-page="2">Αλμυρές πίτες</button>
+      <button class="chip" data-page="3">Γλυκά</button>
+      <button class="chip" data-page="4">Κουλούρια & σνακ</button>
+      <button class="chip" data-page="5">Καφές</button>
+      <button class="chip" data-page="6">Κριτικές</button>
     </div>
     <div class="book-stage reveal zoom" id="bookStage">
       <div class="book" id="book" aria-live="polite"></div>
@@ -457,7 +493,7 @@ header.hide{transform:translateY(-110%)}
       <span class="book-count" id="bookCount"></span>
       <button id="bookNext" aria-label="Επόμενη σελίδα">›</button>
     </div>
-    <p class="menu-note">Πατήστε πάνω στη σελίδα ή σύρετε για να γυρίσετε. Οι τιμές ισχύουν για το κατάστημα Ηρακλέους 1, Φιξ και ενδέχεται να αλλάξουν.</p>
+    <p class="menu-note">Η βιτρίνα αλλάζει κάθε μέρα. Ρωτήστε μας τι βγήκε ζεστό από τον φούρνο!</p>
 
     <template id="bookPages">
       <article class="pg pg-cover">
@@ -465,123 +501,103 @@ header.hide{transform:translateY(-110%)}
           <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M18 44 L30 6"/><path d="M30 44 L18 6"/></g>
           <g fill="currentColor"><ellipse cx="29" cy="9" rx="2.2" ry="4.2" transform="rotate(18 29 9)"/><ellipse cx="25.6" cy="15" rx="2" ry="4" transform="rotate(-25 25.6 15)"/><ellipse cx="31.6" cy="17" rx="2" ry="4" transform="rotate(50 31.6 17)"/><ellipse cx="19" cy="9" rx="2.2" ry="4.2" transform="rotate(-18 19 9)"/><ellipse cx="22.4" cy="15" rx="2" ry="4" transform="rotate(25 22.4 15)"/><ellipse cx="16.4" cy="17" rx="2" ry="4" transform="rotate(-50 16.4 17)"/></g>
         </svg>
-        <span class="sub">Boutique Cafe</span>
+        <span class="sub">Φούρνος · Εξάρχεια</span>
         <span class="ttl">Τα Στάχυα</span>
         <span class="big">Κατάλογος</span>
         <span class="tap">Πατήστε για να ανοίξει →</span>
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Καλώς ήρθατε</span><h3>Στα Στάχυα</h3></div>
-        <p class="pg-text">Φρέσκος καφές, πίτες από τον φούρνο μας και πρωινό που σερβίρεται όλη μέρα.
-          <small>Όπου βλέπετε δύο τιμές, η πρώτη είναι για <b>take away</b> και η δεύτερη για <b>σερβίρισμα</b> στο τραπέζι.</small></p>
-        <img class="pg-photo" src="images/coffee.jpg" alt="" loading="lazy">
+        <div class="pg-head"><span class="pg-kicker">Καλώς ήρθατε</span><h3>Από το 1997</h3></div>
+        <p class="pg-text">Παραδοσιακές πίτες, ζεστά αρτοσκευάσματα και καφές, στη Σπύρου Τρικούπη 12-14.
+          <small>Οι πίτες μας ξεκινούν από <b>2 €</b>. Πολλές φτιάχνονται σε μεγάλα ταψιά, οπότε ρωτήστε μας για ολόκληρα ταψιά για το σπίτι ή το γραφείο.</small></p>
+        <img class="pg-photo" src="images/display.jpg" alt="" loading="lazy">
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Coffee · Tea · Chocolate</span><h3>Καφές & Ροφήματα</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
-        <ul class="pg-items">
-          <li><span class="n">Espresso</span><span class="dots"></span><span class="p">1,50 <i>/ 2,00 €</i></span></li>
-          <li><span class="n">Διπλός Espresso</span><span class="dots"></span><span class="p">2,00 <i>/ 2,80 €</i></span></li>
-          <li><span class="n">Freddo Espresso</span><span class="dots"></span><span class="p">2,00 <i>/ 3,20 €</i></span></li>
-          <li><span class="n">Freddo Cappuccino</span><span class="dots"></span><span class="p">2,40 <i>/ 3,50 €</i></span></li>
-          <li><span class="n">Cappuccino</span><span class="dots"></span><span class="p">2,40 <i>/ 3,20 €</i></span></li>
-          <li><span class="n">Φραπέ</span><span class="dots"></span><span class="p">2,80 <i>/ 3,50 €</i></span></li>
-          <li><span class="n">Americano</span><span class="dots"></span><span class="p">2,20 <i>/ 3,00 €</i></span></li>
-          <li><span class="n">Latte</span><span class="dots"></span><span class="p">2,60 <i>/ 3,20 €</i></span></li>
-          <li><span class="n">Ελληνικός</span><span class="dots"></span><span class="p">2,00 <i>/ 2,80 €</i></span></li>
-          <li><span class="n">Ζεστή Σοκολάτα</span><span class="dots"></span><span class="p">2,80 <i>/ 3,60 €</i></span></li>
-          <li><span class="n">Κρύα Σοκολάτα</span><span class="dots"></span><span class="p">2,80 <i>/ 3,60 €</i></span></li>
-          <li><span class="n">Τσάι</span><span class="dots"></span><span class="p">2,50 <i>/ 3,50 €</i></span></li>
+        <div class="pg-head"><span class="pg-kicker">Savory pies</span><h3>Αλμυρές πίτες</h3><span class="pg-sub">από 2,00 €</span></div>
+        <ul class="pg-items plain">
+          <li><span class="n">Ζαμπονοτυρόπιτα<span class="d">Η θρυλική μας: ζαμπόν & τυρί σε τραγανό φύλλο</span></span></li>
+          <li><span class="n">Τυρόπιτα<span class="d">Σπιτική, με φέτα</span></span></li>
+          <li><span class="n">Σπανακόπιτα<span class="d">Σπανάκι, μυρωδικά & φέτα</span></span></li>
+          <li><span class="n">Χορτόπιτα<span class="d">Με φρέσκα χόρτα εποχής</span></span></li>
+          <li><span class="n">Μανιταρόπιτα<span class="d">Με μανιτάρια</span></span></li>
+          <li><span class="n">Κοτόπιτα<span class="d">Με κρεμώδη σως τυριών</span></span></li>
+          <li><span class="n">Λουκανικόπιτα vegan<span class="d">Φυτικό λουκάνικο, όλη η γεύση</span></span></li>
+          <li><span class="n">Κουρού με σουσάμι<span class="d">Με τυρί ή ντομάτα</span></span></li>
         </ul>
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Drinks from the fridge</span><h3>Αναψυκτικά</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
-        <ul class="pg-items">
-          <li><span class="n">Coca-Cola, Sprite 330ml</span><span class="dots"></span><span class="p">1,60 <i>/ 2,50 €</i></span></li>
-          <li><span class="n">Σόδα, Tonic 330ml</span><span class="dots"></span><span class="p">1,40 <i>/ 2,30 €</i></span></li>
-          <li><span class="n">Χυμός ή Iced Tea «Life» 400ml</span><span class="dots"></span><span class="p">2,20 <i>/ 3,00 €</i></span></li>
-          <li><span class="n">Χυμός φρούτων 250ml</span><span class="dots"></span><span class="p">2,00 <i>/ 2,80 €</i></span></li>
-          <li><span class="n">Ξινό Νερό 750ml</span><span class="dots"></span><span class="p">2,20 <i>/ 3,00 €</i></span></li>
-          <li><span class="n">Ξινό Νερό 250ml</span><span class="dots"></span><span class="p">1,50 <i>/ 2,30 €</i></span></li>
-          <li><span class="n">Cold Brew Coffee 250ml</span><span class="dots"></span><span class="p">4,00 <i>/ 4,80 €</i></span></li>
-          <li><span class="n">Νερό 500ml</span><span class="dots"></span><span class="p">0,50 €</span></li>
-          <li><span class="n">Νερό 1,5L</span><span class="dots"></span><span class="p">1,00 €</span></li>
+        <div class="pg-head"><span class="pg-kicker">Sweet</span><h3>Γλυκά</h3></div>
+        <ul class="pg-items plain">
+          <li><span class="n">Μπουγάτσα με κρέμα<span class="d">Ζεστή, με ζάχαρη άχνη & κανέλα</span></span></li>
+          <li><span class="n">Κρουασάν σοκολάτας<span class="d">Αφράτο, με γέμιση σοκολάτας</span></span></li>
+          <li><span class="n">Κρουασάν βουτύρου<span class="d">Τραγανό, σε πολλά φύλλα</span></span></li>
+          <li><span class="n">Γλυκές πίτες<span class="d">Ρωτήστε για τις γλυκές πίτες της ημέρας</span></span></li>
         </ul>
+        <img class="pg-photo" src="images/croissants.jpg" alt="" loading="lazy">
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Served all day</span><h3>Πρωινό</h3></div>
-        <ul class="pg-items">
-          <li><span class="n">BIG Breakfast<span class="d">Ομελέτα 3 αυγών, λουκάνικο, μπέικον, τοστ με τυρί, ντοματίνια, φρέσκος χυμός</span></span><span class="dots"></span><span class="p">7,50 €</span></li>
-          <li><span class="n">Pancake Breakfast<span class="d">Pancakes, 2 αυγά, λουκάνικο, μπέικον, τυρί, φρέσκος χυμός</span></span><span class="dots"></span><span class="p">8,50 €</span></li>
-          <li><span class="n">English Breakfast<span class="d">2 αυγά, λουκάνικο, μπέικον, φασόλια, τυρί, τσάι ή φίλτρου</span></span><span class="dots"></span><span class="p">8,90 €</span></li>
-          <li><span class="n">Ομελέτα με μπέικον<span class="d">3 αυγά, μπέικον, ψωμάκι</span></span><span class="dots"></span><span class="p">5,50 €</span></li>
-          <li><span class="n">Pancake με αυγά<span class="d">2 αυγά, μπέικον, τυρί</span></span><span class="dots"></span><span class="p">6,80 €</span></li>
-          <li><span class="n">Κρουασάν με αυγά<span class="d">3 αυγά & μπέικον</span></span><span class="dots"></span><span class="p">5,50 €</span></li>
-          <li><span class="n">Κρουασάν μπέικον & τυρί</span><span class="dots"></span><span class="p">4,00 €</span></li>
+        <div class="pg-head"><span class="pg-kicker">Bread & snacks</span><h3>Κουλούρια & σνακ</h3></div>
+        <ul class="pg-items plain">
+          <li><span class="n">Κουλούρι Θεσσαλονίκης<span class="d">Με σουσάμι, φρέσκο κάθε πρωί</span></span></li>
+          <li><span class="n">Κουλούρι πολύσπορο<span class="d">Με ηλιόσπορο & σπόρους</span></span></li>
+          <li><span class="n">Πιτάκια ντομάτα-τυρί<span class="d">Αφράτη ζύμη, ψημένα στον φούρνο</span></span></li>
+          <li><span class="n">Ρολά με μπέικον & τυρί<span class="d">Για ένα γρήγορο, χορταστικό σνακ</span></span></li>
         </ul>
+        <img class="pg-photo" src="images/koulouri-stack.jpg" alt="" loading="lazy">
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Sweet & savory</span><h3>Pancakes</h3></div>
-        <ul class="pg-items">
-          <li><span class="n">Βούτυρο & ελληνικό μέλι</span><span class="dots"></span><span class="p">5,50 €</span></li>
-          <li><span class="n">Τυρί κρέμα & μαρμελάδα</span><span class="dots"></span><span class="p">7,00 €</span></li>
-          <li><span class="n">Nutella, μπανάνα & μπισκότο</span><span class="dots"></span><span class="p">7,00 €</span></li>
-          <li><span class="n">Γιαούρτι, μήλο & κανέλα</span><span class="dots"></span><span class="p">7,00 €</span></li>
-          <li><span class="n">Φράουλα, μπανάνα & τυρί κρέμα</span><span class="dots"></span><span class="p">8,50 €</span></li>
-          <li><span class="n">Καπνιστός σολομός & τυρί κρέμα</span><span class="dots"></span><span class="p">10,50 €</span></li>
+        <div class="pg-head"><span class="pg-kicker">Coffee</span><h3>Καφές</h3><span class="pg-sub">με espresso Mokarico</span></div>
+        <ul class="pg-items plain">
+          <li><span class="n">Espresso / Διπλός espresso</span></li>
+          <li><span class="n">Freddo Espresso</span></li>
+          <li><span class="n">Freddo Cappuccino</span></li>
+          <li><span class="n">Cappuccino</span></li>
+          <li><span class="n">Ελληνικός</span></li>
+          <li><span class="n">Φραπέ</span></li>
+          <li><span class="n">Χυμοί & αναψυκτικά</span></li>
         </ul>
-        <img class="pg-photo" src="images/pancake-tower.jpg" alt="" loading="lazy">
+        <p class="pg-text" style="margin-top:auto;font-size:1rem">Πίτα και καφές στο χέρι, για να ξεκινήσει σωστά η μέρα.</p>
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Sandwiches & toast</span><h3>Σάντουιτς</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
-        <ul class="pg-items">
-          <li><span class="n">Αυγό, μπέικον & cheddar<span class="d">Σε ψωμάκι με κέτσαπ</span></span><span class="dots"></span><span class="p">4,80 <i>/ 5,30 €</i></span></li>
-          <li><span class="n">Μπαγκέτα γαλοπούλα ή πεπερόνι<span class="d">Τυρί, ντομάτα, μαγιονέζα, μουστάρδα</span></span><span class="dots"></span><span class="p">3,00 <i>/ 3,50 €</i></span></li>
-          <li><span class="n">Μπαγκέτα καπνιστός σολομός<span class="d">Τυρί κρέμα, ντομάτα</span></span><span class="dots"></span><span class="p">5,80 <i>/ 6,50 €</i></span></li>
-          <li><span class="n">Το «Βρώμικο»<span class="d">Μπέικον, λουκάνικο, πεπερόνι, τυρί, ντομάτα, μαγιονέζα</span></span><span class="dots"></span><span class="p">6,00 <i>/ 6,80 €</i></span></li>
-          <li><span class="n">Τοστ γαλοπούλα ή πεπερόνι<span class="d">Τυρί, μαγιονέζα, μουστάρδα</span></span><span class="dots"></span><span class="p">3,00 <i>/ 3,80 €</i></span></li>
-          <li><span class="n">Τοστ τυρί κρέμα & μαρμελάδα</span><span class="dots"></span><span class="p">3,80 €</span></li>
-        </ul>
-      </article>
-
-      <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Burger · Pizza · Tortilla</span><h3>Burger & Πίτσα</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
-        <ul class="pg-items">
-          <li><span class="n">Cheeseburger<span class="d">Τυρί, ντομάτα, κέτσαπ, μαγιονέζα</span></span><span class="dots"></span><span class="p">3,80 <i>/ 4,50 €</i></span></li>
-          <li><span class="n">Διπλό Cheeseburger</span><span class="dots"></span><span class="p">5,20 <i>/ 5,80 €</i></span></li>
-          <li><span class="n">Πίτσα Μαργαρίτα 22εκ</span><span class="dots"></span><span class="p">3,80 <i>/ 4,50 €</i></span></li>
-          <li><span class="n">Πίτσα Πεπερόνι 22εκ</span><span class="dots"></span><span class="p">4,80 <i>/ 5,50 €</i></span></li>
-        </ul>
-        <p class="pg-group">Τορτίγιες</p>
-        <ul class="pg-items">
-          <li><span class="n">Σοκολάτα & μπανάνα</span><span class="dots"></span><span class="p">5,50 €</span></li>
-          <li><span class="n">Σοκολάτα & μπισκότο</span><span class="dots"></span><span class="p">5,50 €</span></li>
-          <li><span class="n">Γαλοπούλα & έξτρα τυρί</span><span class="dots"></span><span class="p">5,50 €</span></li>
-        </ul>
-      </article>
-
-      <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Fresh & light</span><h3>Σαλάτες</h3></div>
-        <ul class="pg-items">
-          <li><span class="n">Ντάκος<span class="d">Παξιμάδι, τυρί κρέμα, ντομάτα, φρέσκο ελαιόλαδο</span></span><span class="dots"></span><span class="p">7,20 €</span></li>
-          <li><span class="n">Στάχυα<span class="d">Ντοματίνια, σως πέστο, ελαιόλαδο</span></span><span class="dots"></span><span class="p">6,80 €</span></li>
-          <li><span class="n">Πράσινη με καπνιστό σολομό<span class="d">Τυρί κρέμα, ελαιόλαδο & βαλσάμικο</span></span><span class="dots"></span><span class="p">12,00 €</span></li>
-        </ul>
-        <img class="pg-photo" src="images/breakfast-wide.jpg" alt="" loading="lazy">
+        <div class="pg-head"><span class="pg-kicker">Από τις κριτικές σας</span><h3>Τι λέτε για εμάς</h3><span class="pg-sub">4,7 ★ · 335 κριτικές Google</span></div>
+        <div class="pg-quotes">
+          <blockquote>“The best bougatsa and pies we've had in Greece.”</blockquote>
+          <blockquote>“The vegan sausage pie is just amazing!!”</blockquote>
+          <blockquote>“Both were hot and delicious.”</blockquote>
+        </div>
       </article>
 
       <article class="pg pg-cover">
         <span class="big" style="margin-top:0">Ευχαριστούμε!</span>
         <span class="ttl" style="font-size:2.4rem;margin:8px 0 18px">Καλή όρεξη</span>
-        <p>Ηρακλέους 1, Φιξ · 211 41 04 407<br>Σπ. Τρικούπη 12-14, Εξάρχεια · 210 38 38 539</p>
-        <span class="sub" style="margin-top:22px">@tastaxya</span>
+        <p>Σπύρου Τρικούπη 12-14, Εξάρχεια<br>210 38 38 539</p>
+        <span class="sub" style="margin-top:22px">Από το 1997</span>
       </article>
     </template>
+  </div>
+</section>
+
+<section class="section breakfast" id="hours">
+  <div class="wrap bf-grid">
+    <div class="reveal">
+      <span class="eyebrow">Ωράριο</span>
+      <h2>Ζεστές πίτες, <em>μέρα και νύχτα.</em></h2>
+      <p class="lead">Ανοίγουμε από τα ξημερώματα, και κάθε Παρασκευή και Σάββατο είμαστε ανοιχτά όλο το 24ωρο. Για όσους πεινάνε μετά τη βόλτα στα Εξάρχεια.</p>
+      <span class="open-pill" id="openPill"></span>
+      <ul class="hours" id="hoursList"></ul>
+      <a href="tel:+302103838539" class="btn btn-gold">Καλέστε μας: 210 38 38 539</a>
+    </div>
+    <div class="bf-photos">
+      <img class="p1" src="images/sesame-pie.jpg" alt="Πίτες με σουσάμι" loading="lazy">
+      <img class="p2" src="images/night-crowd.jpg" alt="Κόσμος έξω από τον φούρνο το βράδυ" loading="lazy">
+      <img class="p3" src="images/pie-tray.jpg" alt="Ταψί με φρέσκια πίτα" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -590,26 +606,24 @@ header.hide{transform:translateY(-110%)}
     <div class="head-row reveal">
       <div>
         <span class="eyebrow">Γκαλερί</span>
-        <h2>Μια ματιά <em>στα Στάχυα.</em></h2>
+        <h2>Μια ματιά <em>στον φούρνο.</em></h2>
       </div>
       <a href="https://www.instagram.com/tastaxya/" target="_blank" rel="noopener" class="btn btn-dark">@tastaxya στο Instagram</a>
     </div>
     <div class="masonry" id="masonry">
-      <button><img src="images/breakfast-plate.jpg" alt="Πιάτο πρωινού" loading="lazy"></button>
-      <button><img src="images/terrace2.jpg" alt="Τα τραπέζια έξω" loading="lazy"></button>
-      <button><img src="images/croissants.jpg" alt="Κρουασάν" loading="lazy"></button>
-      <button><img src="images/pancakes.jpg" alt="Pancakes" loading="lazy"></button>
-      <button><img src="images/interior.jpg" alt="Το εσωτερικό του καφέ" loading="lazy"></button>
-      <button><img src="images/sandwich.jpg" alt="Σάντουιτς" loading="lazy"></button>
-      <button><img src="images/outdoor.jpg" alt="Παρέα στο πεζοδρόμιο" loading="lazy"></button>
+      <button><img src="images/display.jpg" alt="Η βιτρίνα του φούρνου" loading="lazy"></button>
       <button><img src="images/pie-tray.jpg" alt="Ταψί με πίτα" loading="lazy"></button>
-      <button><img src="images/cookies.jpg" alt="Μπισκότα" loading="lazy"></button>
-      <button><img src="images/owners.jpg" alt="Στο πεζοδρόμιο της Ηρακλέους" loading="lazy"></button>
-      <button><img src="images/dessert.jpg" alt="Γλυκό" loading="lazy"></button>
-      <button><img src="images/counter.jpg" alt="Ο πάγκος" loading="lazy"></button>
-      <button><img src="images/bacon-rolls.jpg" alt="Ρολά με μπέικον" loading="lazy"></button>
+      <button><img src="images/croissants.jpg" alt="Κρουασάν" loading="lazy"></button>
+      <button><img src="images/night-crowd.jpg" alt="Βράδυ στον φούρνο" loading="lazy"></button>
+      <button><img src="images/cheese-rolls.jpg" alt="Αρτοσκευάσματα" loading="lazy"></button>
+      <button><img src="images/koulouri.jpg" alt="Κουλούρια" loading="lazy"></button>
+      <button><img src="images/pie-choc.jpg" alt="Γλυκό με σοκολάτα" loading="lazy"></button>
+      <button><img src="images/sesame-pie.jpg" alt="Πίτα με σουσάμι" loading="lazy"></button>
       <button><img src="images/cheese-pie.jpg" alt="Τυρόπιτα" loading="lazy"></button>
-      <button><img src="images/breakfast-wide.jpg" alt="Πρωινό για δύο" loading="lazy"></button>
+      <button><img src="images/koulouri-stack.jpg" alt="Κουλούρια σε στοίβα" loading="lazy"></button>
+      <button><img src="images/pies-sesame.jpg" alt="Κουρού" loading="lazy"></button>
+      <button><img src="images/bacon-rolls.jpg" alt="Ρολά με μπέικον" loading="lazy"></button>
+      <button><img src="images/pie-slice.jpg" alt="Κομμάτι πίτας" loading="lazy"></button>
     </div>
   </div>
 </section>
@@ -625,50 +639,36 @@ header.hide{transform:translateY(-110%)}
   <div class="wrap">
     <span class="eyebrow reveal">Τι λένε για εμάς</span>
     <h2 class="reveal">Οι πελάτες μας <em>μιλούν καλύτερα.</em></h2>
-    <div class="scores">
-      <div class="score reveal"><strong data-count="4,9">4,9</strong><div class="stars">★★★★★</div><small>585 κριτικές Google<br>Boutique Cafe · Φιξ</small></div>
-      <div class="score reveal"><strong data-count="4,7">4,7</strong><div class="stars">★★★★★</div><small>335 κριτικές Google<br>Φούρνος · Εξάρχεια</small></div>
+    <div class="review-row">
+      <div class="score reveal"><strong data-count="4,7">4,7</strong><div class="stars">★★★★★</div><small>335 κριτικές Google<br>Τα Στάχυα · Εξάρχεια</small></div>
+      <figure class="rq reveal"><blockquote>“The best bougatsa and pies we've had in Greece.”</blockquote><figcaption>Κριτική επισκέπτη</figcaption></figure>
+      <figure class="rq reveal"><blockquote>“The vegan sausage pie is just amazing!!”</blockquote><figcaption>Κριτική επισκέπτη</figcaption></figure>
+      <figure class="rq reveal"><blockquote>“Both were hot and delicious.”</blockquote><figcaption>Κριτική επισκέπτη</figcaption></figure>
     </div>
-    <p class="quote reveal">Σας ευχαριστούμε για κάθε κριτική — κάθε αστέρι είναι κίνητρο για να γινόμαστε καλύτεροι.</p>
-    <p class="quote-by reveal">— Η ομάδα των Σταχυών</p>
   </div>
 </section>
 
 <section class="section locations" id="visit">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Καταστήματα</span>
+      <span class="eyebrow">Επικοινωνία</span>
       <h2 style="margin:14px 0 18px">Ελάτε <em>να μας βρείτε.</em></h2>
-      <p class="lead">Δύο γειτονιές, η ίδια φροντίδα. Περάστε για καφέ στο πόδι ή κάτσετε για πρωινό.</p>
+      <p class="lead">Λίγα βήματα από την πλατεία Εξαρχείων. Περάστε για πίτα στο χέρι, καφέ ή ολόκληρο ταψί για το τραπέζι.</p>
     </div>
-    <div class="loc-grid">
-      <article class="loc reveal">
-        <iframe loading="lazy" title="Χάρτης Ηρακλέους 1, Φιξ" src="https://maps.google.com/maps?q=%CE%97%CF%81%CE%B1%CE%BA%CE%BB%CE%AD%CE%BF%CF%85%CF%82%201%2C%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1%20117%2043&z=16&output=embed"></iframe>
-        <div class="loc-body">
-          <span class="tag">Boutique Cafe</span>
-          <h3>Φιξ · Νέος Κόσμος</h3>
-          <p>Ηρακλέους 1 & Καλλιρρόης, Αθήνα</p>
-          <a class="tel" href="tel:+302114104407">211 41 04 407</a>
-          <div class="loc-actions">
-            <a class="btn btn-gold" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%CE%A4%CE%B1+%CE%A3%CF%84%CE%AC%CF%87%CF%85%CE%B1+%CE%97%CF%81%CE%B1%CE%BA%CE%BB%CE%AD%CE%BF%CF%85%CF%82+1+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1">Οδηγίες →</a>
-            <a class="btn btn-ghost" href="tel:+302114104407">Κλήση</a>
-          </div>
+    <article class="loc loc-single reveal">
+      <iframe loading="lazy" title="Χάρτης: Τα Στάχυα, Σπύρου Τρικούπη 12, Εξάρχεια" src="https://maps.google.com/maps?q=%CE%A4%CE%B1%20%CE%A3%CF%84%CE%AC%CF%87%CF%85%CE%B1%2C%20%CE%A3%CF%80%CF%85%CF%81%CE%AF%CE%B4%CF%89%CE%BD%CE%BF%CF%82%20%CE%A4%CF%81%CE%B9%CE%BA%CE%BF%CF%8D%CF%80%CE%B7%2012%2C%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1%20106%2083&z=17&output=embed"></iframe>
+      <div class="loc-body">
+        <span class="tag">Φούρνος · Παραδοσιακά προϊόντα</span>
+        <h3>Τα Στάχυα, Εξάρχεια</h3>
+        <p>Σπύρου Τρικούπη 12-14, 106 83 Αθήνα</p>
+        <a class="tel" href="tel:+302103838539">210 38 38 539</a>
+        <ul class="hours mini" id="hoursMini"></ul>
+        <div class="loc-actions">
+          <a class="btn btn-gold" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%CE%A4%CE%B1+%CE%A3%CF%84%CE%AC%CF%87%CF%85%CE%B1+%CE%A3%CF%80%CF%85%CF%81%CE%AF%CE%B4%CF%89%CE%BD%CE%BF%CF%82+%CE%A4%CF%81%CE%B9%CE%BA%CE%BF%CF%8D%CF%80%CE%B7+12+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1">Οδηγίες →</a>
+          <a class="btn btn-ghost" href="tel:+302103838539">Κλήση</a>
         </div>
-      </article>
-      <article class="loc reveal">
-        <iframe loading="lazy" title="Χάρτης Σπ. Τρικούπη 12-14, Εξάρχεια" src="https://maps.google.com/maps?q=%CE%A3%CF%80%CF%8D%CF%81%CE%BF%CF%85%20%CE%A4%CF%81%CE%B9%CE%BA%CE%BF%CF%8D%CF%80%CE%B7%2012%2C%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1%20106%2083&z=16&output=embed"></iframe>
-        <div class="loc-body">
-          <span class="tag">Φούρνος · Παραδοσιακά προϊόντα</span>
-          <h3>Εξάρχεια</h3>
-          <p>Σπύρου Τρικούπη 12-14, Αθήνα</p>
-          <a class="tel" href="tel:+302103838539">210 38 38 539</a>
-          <div class="loc-actions">
-            <a class="btn btn-gold" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%CE%A4%CE%B1+%CE%A3%CF%84%CE%AC%CF%87%CF%85%CE%B1+%CE%A3%CF%80%CF%8D%CF%81%CE%BF%CF%85+%CE%A4%CF%81%CE%B9%CE%BA%CE%BF%CF%8D%CF%80%CE%B7+12+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1">Οδηγίες →</a>
-            <a class="btn btn-ghost" href="tel:+302103838539">Κλήση</a>
-          </div>
-        </div>
-      </article>
-    </div>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -684,12 +684,12 @@ header.hide{transform:translateY(-110%)}
       </a>
       <div class="socials">
         <a href="https://www.instagram.com/tastaxya/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2.1C2.7 8.5 2.7 8.9 2.7 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8a3.1 3.1 0 100-6.2 3.1 3.1 0 000 6.2zm6.2-8.2a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg></a>
-        <a href="tel:+302114104407" aria-label="Τηλέφωνο"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+        <a href="tel:+302103838539" aria-label="Τηλέφωνο"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
       </div>
     </div>
     <div class="copy">
-      <span>© <span id="yr"></span> Τα Στάχυα · Boutique Cafe</span>
-      <span>Ηρακλέους 1, Φιξ · Σπ. Τρικούπη 12-14, Εξάρχεια</span>
+      <span>© <span id="yr"></span> Τα Στάχυα · Φούρνος από το 1997</span>
+      <span>Σπύρου Τρικούπη 12-14, Εξάρχεια · 210 38 38 539</span>
     </div>
   </div>
 </footer>
@@ -838,6 +838,30 @@ addEventListener('keydown', e => {
 
 buildBook(0);
 
+// ---------- hours (Google Business Profile) ----------
+// [ημέρα, [άνοιγμα, κλείσιμο]] — 0 = Κυριακή. Αλλάξτε εδώ αν αλλάξει το ωράριο.
+const HOURS = [['Κυριακή',[3,15]],['Δευτέρα',[3,15]],['Τρίτη',[3,15]],['Τετάρτη',[3,15]],['Πέμπτη',[3,15]],['Παρασκευή',[0,24]],['Σάββατο',[0,24]]];
+const hh = n => String(n % 24).padStart(2, '0') + ':00';
+const fmtHours = ([a, b]) => a === 0 && b === 24 ? 'Ανοιχτά 24ωρο' : `${hh(a)} – ${hh(b)}`;
+const athens = new Date(new Date().toLocaleString('en-US', {timeZone:'Europe/Athens'}));
+const today = athens.getDay(), hour = athens.getHours();
+['hoursList', 'hoursMini'].forEach(id => {
+  const ul = document.getElementById(id);
+  [1, 2, 3, 4, 5, 6, 0].forEach(d => {
+    const li = document.createElement('li');
+    li.className = d === today ? 'today' : '';
+    const a = document.createElement('span'), b = document.createElement('span');
+    a.textContent = HOURS[d][0]; b.textContent = fmtHours(HOURS[d][1]);
+    li.append(a, b); ul.appendChild(li);
+  });
+});
+const [openH, closeH] = HOURS[today][1], pill = document.getElementById('openPill');
+if (hour >= openH && hour < closeH) pill.textContent = 'Ανοιχτά τώρα';
+else {
+  pill.classList.add('closed');
+  pill.textContent = hour < openH ? `Κλειστά τώρα · ανοίγουμε στις ${hh(openH)}` : `Κλειστά τώρα · ανοίγουμε αύριο ${hh(HOURS[(today + 1) % 7][1][0])}`;
+}
+
 // ---------- scroll animations ----------
 // stagger siblings, assign reveal variants
 document.querySelectorAll('.tile').forEach(t => t.classList.add('clip'));
@@ -898,7 +922,7 @@ if (!reduceMotion) {
 // parallax, progress bar, header
 const bar = document.getElementById('progress');
 const heroBg = document.querySelector('.hero-bg'), heroInner = document.querySelector('.hero .wrap');
-const para = [['.story-media .a', -.05], ['.story-media .b', .12], ['.badge', .22], ['.bf-photos .p2', .06], ['.bf-photos .p3', -.06]]
+const para = [['.hero-collage .c2', .1], ['.hero-collage .c3', -.07], ['.story-media .a', -.05], ['.story-media .b', .12], ['.badge', .22]]
   .map(([s, k]) => [document.querySelector(s), k]).filter(([el]) => el);
 let lastY = scrollY, ticking = false;
 function frame() {
@@ -910,11 +934,11 @@ function frame() {
   lastY = y;
   if (!reduceMotion) {
     if (y < innerHeight * 1.2) {
-      heroBg.style.translate = `0 ${y * .35}px`;
+      if (heroBg) heroBg.style.translate = `0 ${y * .35}px`;
       heroInner.style.translate = `0 ${y * .15}px`;
       heroInner.style.opacity = Math.max(0, 1 - y / (innerHeight * .8));
     }
-    para.forEach(([el, k]) => {
+    if (innerWidth > 980) para.forEach(([el, k]) => {
       const r = el.parentElement.getBoundingClientRect();
       if (r.bottom < -300 || r.top > innerHeight + 300) return;
       el.style.translate = `0 ${(r.top + r.height / 2 - innerHeight / 2) * -k}px`;
@@ -923,7 +947,7 @@ function frame() {
   ticking = false;
 }
 addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, {passive:true});
-addEventListener('resize', frame);
+addEventListener('resize', () => { if (innerWidth <= 980) para.forEach(([el]) => el.style.translate = ''); frame(); });
 frame();
 
 // lightbox
