@@ -406,7 +406,7 @@ header.hide{transform:translateY(-110%)}
         <a href="#visit" class="btn btn-ghost">Πού θα μας βρείτε</a>
       </div>
       <div class="hero-meta">
-        <div><strong><span data-count="4,7">4,7</span> <span class="stars">★</span></strong>335 κριτικές Google</div>
+        <div><strong><span data-count="4,7">4,7</span> <span class="stars">★</span></strong>358 κριτικές Google</div>
         <div><strong>από <span data-count="1997">1997</span></strong>στα Εξάρχεια</div>
         <div><strong><span data-count="30">30</span>+</strong>είδη πίτας & σνακ</div>
       </div>
@@ -587,7 +587,7 @@ header.hide{transform:translateY(-110%)}
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Από τις κριτικές σας</span><h3>Τι λέτε για εμάς</h3><span class="pg-sub">4,7 ★ · 335 κριτικές Google</span></div>
+        <div class="pg-head"><span class="pg-kicker">Από τις κριτικές σας</span><h3>Τι λέτε για εμάς</h3><span class="pg-sub">4,7 ★ · 358 κριτικές Google</span></div>
         <div class="pg-quotes">
           <blockquote>“The best bougatsa and pies we've had in Greece.”</blockquote>
           <blockquote>“The vegan sausage pie is just amazing!!”</blockquote>
@@ -667,7 +667,7 @@ header.hide{transform:translateY(-110%)}
     <span class="eyebrow reveal">Τι λένε για εμάς</span>
     <h2 class="reveal">Οι πελάτες μας <em>μιλούν καλύτερα.</em></h2>
     <div class="review-row">
-      <div class="score reveal"><strong data-count="4,7">4,7</strong><div class="stars">★★★★★</div><small>335 κριτικές Google<br>Τα Στάχυα · Εξάρχεια</small></div>
+      <div class="score reveal"><strong data-count="4,7">4,7</strong><div class="stars">★★★★★</div><small>358 κριτικές Google<br>Τα Στάχυα · Εξάρχεια</small></div>
       <figure class="rq reveal"><blockquote>“The best bougatsa and pies we've had in Greece.”</blockquote><figcaption>Κριτική επισκέπτη</figcaption></figure>
       <figure class="rq reveal"><blockquote>“The vegan sausage pie is just amazing!!”</blockquote><figcaption>Κριτική επισκέπτη</figcaption></figure>
       <figure class="rq reveal"><blockquote>“Both were hot and delicious.”</blockquote><figcaption>Κριτική επισκέπτη</figcaption></figure>
@@ -867,12 +867,12 @@ addEventListener('keydown', e => {
 buildBook(0);
 
 // ---------- hours (Google Business Profile) ----------
-// [ημέρα, [άνοιγμα, κλείσιμο]] — 0 = Κυριακή. Αλλάξτε εδώ αν αλλάξει το ωράριο.
-const HOURS = [['Κυριακή',[3,15]],['Δευτέρα',[3,15]],['Τρίτη',[3,15]],['Τετάρτη',[3,15]],['Πέμπτη',[3,15]],['Παρασκευή',[0,24]],['Σάββατο',[0,24]]];
-const hh = n => String(n % 24).padStart(2, '0') + ':00';
+// [ημέρα, [άνοιγμα, κλείσιμο]] σε ώρες (16.5 = 16:30) — 0 = Κυριακή. Αλλάξτε εδώ αν αλλάξει το ωράριο.
+const HOURS = [['Κυριακή',[3,16.5]],['Δευτέρα',[2.5,16.5]],['Τρίτη',[3,16.5]],['Τετάρτη',[3,16.5]],['Πέμπτη',[3,17]],['Παρασκευή',[0,24]],['Σάββατο',[0,24]]];
+const hh = n => String(Math.floor(n) % 24).padStart(2, '0') + ':' + String(Math.round((n % 1) * 60)).padStart(2, '0');
 const fmtHours = ([a, b]) => a === 0 && b === 24 ? 'Ανοιχτά 24ωρο' : `${hh(a)} – ${hh(b)}`;
 const athens = new Date(new Date().toLocaleString('en-US', {timeZone:'Europe/Athens'}));
-const today = athens.getDay(), hour = athens.getHours();
+const today = athens.getDay(), hour = athens.getHours() + athens.getMinutes() / 60;
 ['hoursList', 'hoursMini'].forEach(id => {
   const ul = document.getElementById(id);
   [1, 2, 3, 4, 5, 6, 0].forEach(d => {
