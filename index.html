@@ -359,6 +359,7 @@ header.hide{transform:translateY(-110%)}
 .pg-full img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pg-full-cap{position:absolute;left:0;right:0;bottom:0;padding:70px 30px 34px;text-align:center;color:#fff;font-family:var(--serif);font-style:italic;font-size:1.5rem;background:linear-gradient(transparent,rgba(12,18,14,.8))}
 .order-link{display:inline-block;margin-top:10px;color:var(--green);font-weight:700;border-bottom:1.5px solid var(--wheat)}
+.pg-note{margin-top:14px;font-size:.78rem;font-style:italic;color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
@@ -441,7 +442,7 @@ header.hide{transform:translateY(-110%)}
     <div class="reveal">
       <span class="eyebrow">Η ιστορία μας</span>
       <h2>Ο φούρνος της <em>γειτονιάς.</em></h2>
-      <p class="lead">Τα Στάχυα άνοιξαν το 1997 στη Σπύρου Τρικούπη 12-14, στην καρδιά των Εξαρχείων. Από τότε ο φούρνος ζυμώνει, ανοίγει φύλλο και ψήνει καθημερινά για φοιτητές, γείτονες, νυχτοπερπατητές και όποιον περάσει από την πλατεία.</p>
+      <p class="lead">Τα Στάχυα άνοιξαν το 1997 στη Σπύρου Τρικούπη 12-14, στην καρδιά των Εξαρχείων. Από τότε ο φούρνος ψήνει καθημερινά για φοιτητές, γείτονες, νυχτοπερπατητές και όποιον περάσει από την πλατεία.</p>
       <p class="lead">Είμαστε οικογενειακός φούρνος, του Ηλία Παπαθεοδώρου. Κρατάμε τις παραδοσιακές συνταγές και τις τιμές σε επίπεδο που ταιριάζει σε κάθε τσέπη.</p>
       <div class="pillars">
         <div><b>Από το 1997</b><small>Σχεδόν τριάντα χρόνια στην ίδια γωνιά των Εξαρχείων.</small></div>
@@ -459,10 +460,10 @@ header.hide{transform:translateY(-110%)}
         <span class="eyebrow">Οι πίτες μας</span>
         <h2>Παραδοσιακές γεύσεις, <em>ζεστές από τον φούρνο.</em></h2>
       </div>
-      <p class="lead">Χειροποίητες πίτες με τραγανό φύλλο, μπουγάτσα με κρέμα, κουλούρια με σουσάμι και αφράτα κρουασάν. Για να τα πάρετε στο χέρι ή να τα απολαύσετε με έναν καφέ.</p>
+      <p class="lead">Πίτες με τραγανό φύλλο, μπουγάτσα με κρέμα, κουλούρια με σουσάμι και αφράτα κρουασάν. Για να τα πάρετε στο χέρι ή να τα απολαύσετε με έναν καφέ.</p>
     </div>
     <div class="bento">
-      <figure class="tile t-big reveal"><img src="images/pie-cut.jpg" alt="Σπανακόπιτα σε κομμάτια" loading="lazy"><figcaption><b>Σπανακόπιτα & χορτόπιτα</b><small>Χειροποίητο φύλλο, φρέσκα χόρτα & φέτα</small></figcaption></figure>
+      <figure class="tile t-big reveal"><img src="images/pie-cut.jpg" alt="Σπανακόπιτα σε κομμάτια" loading="lazy"><figcaption><b>Σπανακόπιτα</b><small>Ζεστή από τον φούρνο, από 2,50 €</small></figcaption></figure>
       <figure class="tile t-tall reveal"><img src="images/ham-pies.jpg" alt="Ζαμπονοτυρόπιτες" loading="lazy"><figcaption><b>Ζαμπονοτυρόπιτα</b><small>Η θρυλική μας, εδώ και χρόνια</small></figcaption></figure>
       <figure class="tile reveal"><img src="images/croissants.jpg" alt="Κρουασάν" loading="lazy"><figcaption><b>Κρουασάν</b><small>Βουτύρου & σοκολάτας</small></figcaption></figure>
       <figure class="tile reveal"><img src="images/koulouri.jpg" alt="Κουλούρια" loading="lazy"><figcaption><b>Κουλούρια</b><small>Με σουσάμι, κάθε πρωί</small></figcaption></figure>
@@ -483,12 +484,15 @@ header.hide{transform:translateY(-110%)}
       <p class="lead">Ξεφυλλίστε τον κατάλογό μας: πατήστε πάνω στη σελίδα, σύρετε ή χρησιμοποιήστε τα βελάκια.</p>
     </div>
     <div class="book-index reveal" id="bookIndex">
-      <button class="chip" data-page="2">Τυρόπιτες</button>
-      <button class="chip" data-page="3">Ιδιαίτερες πίτες</button>
-      <button class="chip" data-page="4">Σνακ & Vegan</button>
-      <button class="chip" data-page="5">Γλυκά</button>
-      <button class="chip" data-page="6">Ποτά</button>
-      <button class="chip" data-page="7">Κριτικές</button>
+      <button class="chip" data-page="2">Πίτες</button>
+      <button class="chip" data-page="3">Κρουασάν & γλυκά</button>
+      <button class="chip" data-page="4">Καφές</button>
+      <button class="chip" data-page="5">Πρωινό</button>
+      <button class="chip" data-page="6">Pancakes</button>
+      <button class="chip" data-page="7">Πίτσα & Burger</button>
+      <button class="chip" data-page="8">Σάντουιτς</button>
+      <button class="chip" data-page="9">Σαλάτες</button>
+      <button class="chip" data-page="10">Ποτά</button>
     </div>
     <div class="book-stage reveal zoom" id="bookStage">
       <div class="book" id="book" aria-live="polite"></div>
@@ -514,78 +518,149 @@ header.hide{transform:translateY(-110%)}
 
       <article class="pg">
         <div class="pg-head"><span class="pg-kicker">Καλώς ήρθατε</span><h3>Από το 1997</h3></div>
-        <p class="pg-text">Χειροποίητες πίτες, ζεστά αρτοσκευάσματα και καφές, στη Σπύρου Τρικούπη 12-14.
-          <small>Η βιτρίνα αλλάζει κάθε μέρα. Ρωτήστε μας στον πάγκο για τιμές και για ό,τι βγήκε ζεστό από τον φούρνο.</small></p>
+        <p class="pg-text">Πίτες και κρουασάν ζεστά από τον φούρνο, καφές και πρωινό που σερβίρεται όλη μέρα.
+          <small>Όπου βλέπετε δύο τιμές, η πρώτη είναι για <b>take away</b> και η δεύτερη για <b>σερβίρισμα</b> στο τραπέζι.</small></p>
         <img class="pg-photo" src="images/display.jpg" alt="" loading="lazy">
       </article>
+      <article class="pg">
+        <div class="pg-head"><span class="pg-kicker">Baked daily*</span><h3>Πίτες</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
+        <ul class="pg-items">
+          <li><span class="n">Τυρόπιτα της γιαγιάς</span><span class="dots"></span><span class="p">1,60 <i>/ 2,20 €</i></span></li>
+          <li><span class="n">Τυρόπιτα κουρού</span><span class="dots"></span><span class="p">2,00 <i>/ 2,50 €</i></span></li>
+          <li><span class="n">Τυρόπιτα χωριάτικη</span><span class="dots"></span><span class="p">2,50 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Γραβιερόπιτα</span><span class="dots"></span><span class="p">2,50 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Σπανακόπιτα</span><span class="dots"></span><span class="p">2,50 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Κοτόπιτα</span><span class="dots"></span><span class="p">2,50 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Πιπερόπιτα</span><span class="dots"></span><span class="p">2,80 <i>/ 3,40 €</i></span></li>
+          <li><span class="n">Μανιταρόπιτα</span><span class="dots"></span><span class="p">2,80 €</span></li>
+        </ul>
+        <p class="pg-note">* Ψήνονται φρέσκα κάθε μέρα από κατεψυγμένη ζύμη.</p>
+      </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Οι κλασικές</span><h3>Τυρόπιτες & πίτες</h3></div>
-        <ul class="pg-items plain">
-          <li><span class="n">Ζαμπονοτυρόπιτα<span class="d">Η θρυλική μας</span></span></li>
-          <li><span class="n">Τυρόπιτα της γιαγιάς</span></li>
-          <li><span class="n">Τυρόπιτα κουρού<span class="d">Χειροποίητη</span></span></li>
-          <li><span class="n">Τυρόπιτα χωριάτικη<span class="d">Σπιτική, χειροποίητη</span></span></li>
-          <li><span class="n">Σπανακοτυρόπιτα χωριάτικη<span class="d">Σπιτική, χειροποίητη</span></span></li>
-          <li><span class="n">Γραβιερόπιτα χωριάτικη<span class="d">Με γραβιέρα Νάξου</span></span></li>
-          <li><span class="n">Κασερόπιτα<span class="d">Με κασέρι Δωδώνη</span></span></li>
+        <div class="pg-head"><span class="pg-kicker">Baked daily*</span><h3>Κρουασάν & γλυκά</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
+        <ul class="pg-items">
+          <li><span class="n">Κρουασάν βουτύρου</span><span class="dots"></span><span class="p">2,00 <i>/ 2,80 €</i></span></li>
+          <li><span class="n">Κρουασάν σοκολάτα</span><span class="dots"></span><span class="p">2,00 <i>/ 2,50 €</i></span></li>
+          <li><span class="n">Κρουασάν σοκολάτα-μπανάνα</span><span class="dots"></span><span class="p">2,30 €</span></li>
+          <li><span class="n">Κρουασάν ζαμπόν & τυρί</span><span class="dots"></span><span class="p">2,50 €</span></li>
+          <li><span class="n">Μπουγάτσα κρέμα</span><span class="dots"></span><span class="p">2,50 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Κρητικά καλτσουνάκια<span class="d">Μίνι γλυκά τυροπιτάκια</span></span><span class="dots"></span><span class="p">1,30 <i>/ 1,60 €</i></span></li>
+          <li><span class="n">Κουλούρι Θεσσαλονίκης</span><span class="dots"></span><span class="p">0,60 <i>/ 1,00 €</i></span></li>
+          <li><span class="n">Κουλουράκια<span class="d">Κανέλα, σουσάμι, πολύσπορο, καλαμπόκι</span></span><span class="dots"></span><span class="p">0,40 <i>/ 0,80 €</i></span></li>
+        </ul>
+        <p class="pg-note">* Ψήνονται φρέσκα κάθε μέρα από κατεψυγμένη ζύμη.</p>
+      </article>
+
+      <article class="pg">
+        <div class="pg-head"><span class="pg-kicker">Coffee · Tea · Chocolate</span><h3>Καφές & ροφήματα</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
+        <ul class="pg-items">
+          <li><span class="n">Espresso</span><span class="dots"></span><span class="p">1,50 <i>/ 2,00 €</i></span></li>
+          <li><span class="n">Διπλός espresso</span><span class="dots"></span><span class="p">2,00 <i>/ 2,80 €</i></span></li>
+          <li><span class="n">Freddo espresso</span><span class="dots"></span><span class="p">2,00 <i>/ 3,20 €</i></span></li>
+          <li><span class="n">Freddo cappuccino</span><span class="dots"></span><span class="p">2,40 <i>/ 3,50 €</i></span></li>
+          <li><span class="n">Cappuccino</span><span class="dots"></span><span class="p">2,40 <i>/ 3,20 €</i></span></li>
+          <li><span class="n">Φραπέ</span><span class="dots"></span><span class="p">2,80 <i>/ 3,50 €</i></span></li>
+          <li><span class="n">Americano</span><span class="dots"></span><span class="p">2,20 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Latte</span><span class="dots"></span><span class="p">2,60 <i>/ 3,20 €</i></span></li>
+          <li><span class="n">Ελληνικός</span><span class="dots"></span><span class="p">2,00 <i>/ 2,80 €</i></span></li>
+          <li><span class="n">Σοκολάτα ζεστή ή κρύα</span><span class="dots"></span><span class="p">2,80 <i>/ 3,60 €</i></span></li>
+          <li><span class="n">Τσάι</span><span class="dots"></span><span class="p">2,50 <i>/ 3,50 €</i></span></li>
         </ul>
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Του φούρνου</span><h3>Ιδιαίτερες πίτες</h3></div>
-        <ul class="pg-items plain">
-          <li><span class="n">Κοτόπιτα<span class="d">Με cheddar & κοτόπουλο στήθος</span></span></li>
-          <li><span class="n">Πιπερόπιτα<span class="d">Χειροποίητη</span></span></li>
-          <li><span class="n">Χορτόπιτα special<span class="d">Με πράσο & σπανάκι</span></span></li>
-          <li><span class="n">Μελιτζανόπιτα με φέτα</span></li>
-          <li><span class="n">Φωλιά κοτόπουλο</span></li>
-          <li><span class="n">Μπέικον & παρμεζάνα</span></li>
-          <li><span class="n">Ζύμη χωριάτικη με φέτα<span class="d">Φέτα Δωδώνη, ντομάτα, ελαιόλαδο & ρίγανη</span></span></li>
+        <div class="pg-head"><span class="pg-kicker">Served all day</span><h3>Πρωινό</h3></div>
+        <ul class="pg-items">
+          <li><span class="n">BIG Breakfast<span class="d">Ομελέτα 3 αυγών, λουκάνικο, μπέικον, τοστ με τυρί, ντοματίνια, φρέσκος χυμός</span></span><span class="dots"></span><span class="p">7,50 €</span></li>
+          <li><span class="n">Pancake Breakfast<span class="d">Pancakes, 2 αυγά, λουκάνικο, μπέικον, τυρί, φρέσκος χυμός</span></span><span class="dots"></span><span class="p">8,50 €</span></li>
+          <li><span class="n">Αγγλικό Breakfast<span class="d">2 αυγά, λουκάνικο, μπέικον, τυρί, φασόλια, τσάι ή καφές φίλτρου</span></span><span class="dots"></span><span class="p">8,90 €</span></li>
+          <li><span class="n">Ομελέτα με μπέικον<span class="d">3 αυγά, μπέικον & ψωμάκι</span></span><span class="dots"></span><span class="p">5,50 €</span></li>
+          <li><span class="n">Pancake με αυγά<span class="d">2 αυγά, μπέικον, τυρί</span></span><span class="dots"></span><span class="p">6,80 €</span></li>
+          <li><span class="n">Κρουασάν με αυγά & μπέικον<span class="d">3 αυγά</span></span><span class="dots"></span><span class="p">5,50 €</span></li>
+          <li><span class="n">Κρουασάν με μπέικον & τυρί</span><span class="dots"></span><span class="p">4,00 €</span></li>
         </ul>
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Στο χέρι</span><h3>Σνακ & Vegan</h3></div>
-        <ul class="pg-items plain">
-          <li><span class="n">Κουλούρι Θεσσαλονίκης</span></li>
-          <li><span class="n">Κουλούρι στριφτό<span class="d">Με γαλοπούλα & Philadelphia</span></span></li>
-          <li><span class="n">Σφολιάτα με φέτα, μέλι & σουσάμι</span></li>
-          <li><span class="n">Hamburger<span class="d">Μπιφτέκι, gouda, ντομάτα & χειροποίητη σάλτσα</span></span></li>
+        <div class="pg-head"><span class="pg-kicker">Sweet & savory</span><h3>Pancakes</h3></div>
+        <ul class="pg-items">
+          <li><span class="n">Βούτυρο & μέλι</span><span class="dots"></span><span class="p">5,50 €</span></li>
+          <li><span class="n">Τυρί κρέμα & μαρμελάδα</span><span class="dots"></span><span class="p">7,00 €</span></li>
+          <li><span class="n">Nutella, μπανάνα, μπισκότο</span><span class="dots"></span><span class="p">7,00 €</span></li>
+          <li><span class="n">Γιαούρτι, μήλο, κανέλα</span><span class="dots"></span><span class="p">7,00 €</span></li>
+          <li><span class="n">Φράουλα, μπανάνα & τυρί κρέμα</span><span class="dots"></span><span class="p">8,50 €</span></li>
+          <li><span class="n">Καπνιστός σολομός & τυρί κρέμα</span><span class="dots"></span><span class="p">10,50 €</span></li>
         </ul>
-        <p class="pg-group">Vegan</p>
-        <ul class="pg-items plain">
-          <li><span class="n">Πιπερόπιτα vegan<span class="d">Χειροποίητη</span></span></li>
-          <li><span class="n">Λουκανικόπιτα plant based<span class="d">Με ρεβύθι</span></span></li>
+        <p class="pg-group">Τορτίγιες</p>
+        <ul class="pg-items">
+          <li><span class="n">Σοκολάτα & μπανάνα</span><span class="dots"></span><span class="p">5,50 €</span></li>
+          <li><span class="n">Σοκολάτα & μπισκότο</span><span class="dots"></span><span class="p">5,50 €</span></li>
+          <li><span class="n">Γαλοπούλα & έξτρα τυρί</span><span class="dots"></span><span class="p">5,50 €</span></li>
         </ul>
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Sweet</span><h3>Γλυκά</h3></div>
-        <ul class="pg-items plain">
-          <li><span class="n">Μπουγάτσα με κρέμα<span class="d">Με φρέσκο γάλα</span></span></li>
-          <li><span class="n">Κρουασάν σοκολάτα & μπανάνα</span></li>
-          <li><span class="n">Γίγας κουλούρι μπισκότο σοκολάτα<span class="d">Χειροποίητο</span></span></li>
+        <div class="pg-head"><span class="pg-kicker">Pizza · Burger</span><h3>Πίτσα & Burger</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
+        <ul class="pg-items">
+          <li><span class="n">Πίτσα Μαργαρίτα 22εκ<span class="d">Ιταλική σάλτσα, τυρί</span></span><span class="dots"></span><span class="p">3,80 <i>/ 4,50 €</i></span></li>
+          <li><span class="n">Πίτσα Πεπερόνι 22εκ<span class="d">Πεπερόνι, ιταλική σάλτσα, τυρί</span></span><span class="dots"></span><span class="p">4,80 <i>/ 5,50 €</i></span></li>
+          <li><span class="n">Μπέργκερ<span class="d">Τυρί, ντομάτα, κετσάπ, μαγιονέζα</span></span><span class="dots"></span><span class="p">3,80 <i>/ 4,50 €</i></span></li>
+          <li><span class="n">Διπλό μπέργκερ</span><span class="dots"></span><span class="p">5,20 <i>/ 5,80 €</i></span></li>
         </ul>
-        <img class="pg-photo" src="images/croissants.jpg" alt="" loading="lazy">
+        <p class="pg-note">Η ζύμη της πίτσας είναι κατεψυγμένη.</p>
+        <img class="pg-photo" src="images/sesame-pie.jpg" alt="" loading="lazy">
       </article>
 
       <article class="pg">
-        <div class="pg-head"><span class="pg-kicker">Drinks</span><h3>Αναψυκτικά & μπύρες</h3></div>
-        <ul class="pg-items plain">
-          <li><span class="n">Coca-Cola / Zero 330ml</span></li>
-          <li><span class="n">Βίκος πορτοκαλάδα, λεμονάδα, γκαζόζα</span></li>
-          <li><span class="n">Red Bull 250ml</span></li>
-          <li><span class="n">Νερό Ζαγόρι 500ml</span></li>
-          <li><span class="n">Νερό Ζαγόρι 1,5L</span></li>
-        </ul>
-        <p class="pg-group">Μπύρες</p>
-        <ul class="pg-items plain">
-          <li><span class="n">Άλφα, Fischer, Μάμος 330ml</span></li>
-          <li><span class="n">Mythos, Fix, Μάμος, Amstel 500ml</span></li>
+        <div class="pg-head"><span class="pg-kicker">Sandwiches & stuff</span><h3>Σάντουιτς</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
+        <ul class="pg-items">
+          <li><span class="n">Αυγό, μπέικον & τσένταρ<span class="d">Σε ψωμάκι με κέτσαπ</span></span><span class="dots"></span><span class="p">4,80 <i>/ 5,30 €</i></span></li>
+          <li><span class="n">Μπαγκέτα γαλοπούλα ή πεπερόνι<span class="d">Τυρί, ντομάτα, μαγιονέζα, μουστάρδα</span></span><span class="dots"></span><span class="p">3,00 <i>/ 3,50 €</i></span></li>
+          <li><span class="n">Μπαγκέτα καπνιστός σολομός<span class="d">Τυρί κρέμα, ντομάτα</span></span><span class="dots"></span><span class="p">5,80 <i>/ 6,50 €</i></span></li>
+          <li><span class="n">Το Βρώμικο<span class="d">Μπέικον, λουκάνικο, πεπερόνι, τυρί, ντομάτα, μαγιονέζα</span></span><span class="dots"></span><span class="p">6,00 <i>/ 6,80 €</i></span></li>
+          <li><span class="n">Τοστ γαλοπούλα ή πεπερόνι<span class="d">Τυρί, μαγιονέζα, μουστάρδα</span></span><span class="dots"></span><span class="p">3,00 <i>/ 3,80 €</i></span></li>
+          <li><span class="n">Τοστ τυρί κρέμα & μαρμελάδα</span><span class="dots"></span><span class="p">3,80 €</span></li>
         </ul>
       </article>
 
+      <article class="pg">
+        <div class="pg-head"><span class="pg-kicker">Salad</span><h3>Σαλάτες</h3></div>
+        <ul class="pg-items">
+          <li><span class="n">Ντάκος<span class="d">Παξιμάδι, τυρί κρέμα, ντομάτα, φρέσκο ελαιόλαδο</span></span><span class="dots"></span><span class="p">7,20 €</span></li>
+          <li><span class="n">Στάχυα<span class="d">Ντοματίνια, σως πέστο, ελαιόλαδο</span></span><span class="dots"></span><span class="p">6,80 €</span></li>
+          <li><span class="n">Πράσινη με καπνιστό σολομό<span class="d">Τυρί κρέμα, ελαιόλαδο & βαλσάμικο</span></span><span class="dots"></span><span class="p">12,00 €</span></li>
+        </ul>
+        <img class="pg-photo" src="images/breakfast-wide.jpg" alt="" loading="lazy">
+      </article>
+
+      <article class="pg">
+        <div class="pg-head"><span class="pg-kicker">Drinks from the fridge</span><h3>Δροσερά</h3><span class="pg-sub">take away / σερβίρισμα</span></div>
+        <ul class="pg-items">
+          <li><span class="n">Φρέσκος χυμός πορτοκάλι 330ml</span><span class="dots"></span><span class="p">2,60 <i>/ 3,80 €</i></span></li>
+          <li><span class="n">Fruit slush ή γρανίτα 330ml<span class="d">Φράουλα, λεμόνι, καρπούζι</span></span><span class="dots"></span><span class="p">2,50 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Cold brew coffee 250ml</span><span class="dots"></span><span class="p">4,00 <i>/ 4,80 €</i></span></li>
+          <li><span class="n">Coca-Cola, Sprite 330ml</span><span class="dots"></span><span class="p">1,60 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Σόδα, Tonic, Seltzer 330ml</span><span class="dots"></span><span class="p">1,40 <i>/ 2,30 €</i></span></li>
+          <li><span class="n">Χυμός ή Iced Tea «Life» 400ml</span><span class="dots"></span><span class="p">2,20 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Χυμός φρούτων 250ml</span><span class="dots"></span><span class="p">2,00 <i>/ 2,80 €</i></span></li>
+          <li><span class="n">Ξινό Νερό 750ml</span><span class="dots"></span><span class="p">2,20 <i>/ 3,00 €</i></span></li>
+          <li><span class="n">Ξινό Νερό 250ml</span><span class="dots"></span><span class="p">1,50 <i>/ 2,30 €</i></span></li>
+          <li><span class="n">Νερό 500ml · 1,5L</span><span class="dots"></span><span class="p">0,50 · 1,00 €</span></li>
+        </ul>
+      </article>
+
+      <article class="pg">
+        <div class="pg-head"><span class="pg-kicker">Beer · Wine · Spirits</span><h3>Μπύρες & ποτά</h3></div>
+        <ul class="pg-items">
+          <li><span class="n">Alpha, Amstel, Fischer, Fix 330ml</span><span class="dots"></span><span class="p">4,00 €</span></li>
+          <li><span class="n">Kaiser 330ml</span><span class="dots"></span><span class="p">4,50 €</span></li>
+          <li><span class="n">Ποτήρι κρασί, κόκκινο ή λευκό<span class="d">Σερβίρεται με τυρί, κριτσίνια & ντομάτα</span></span><span class="dots"></span><span class="p">6,00 €</span></li>
+          <li><span class="n">Ποτό<span class="d">Whiskey, vodka, gin, rum</span></span><span class="dots"></span><span class="p">7,50 €</span></li>
+          <li><span class="n">Special ποτό & cocktails</span><span class="dots"></span><span class="p">9,00 €</span></li>
+        </ul>
+        <img class="pg-photo" src="images/night-crowd.jpg" alt="" loading="lazy" style="object-position:center 30%">
+      </article>
       <article class="pg">
         <div class="pg-head"><span class="pg-kicker">Από τις κριτικές σας</span><h3>Τι λέτε για εμάς</h3><span class="pg-sub">4,7 ★ · 358 κριτικές Google</span></div>
         <div class="pg-quotes">
@@ -593,11 +668,6 @@ header.hide{transform:translateY(-110%)}
           <blockquote>“The vegan sausage pie is just amazing!!”</blockquote>
           <blockquote>“Both were hot and delicious.”</blockquote>
         </div>
-      </article>
-
-      <article class="pg pg-full">
-        <img src="images/pie-tray.jpg" alt="" loading="lazy">
-        <span class="pg-full-cap">Φρέσκα ταψιά, κάθε μέρα</span>
       </article>
 
       <article class="pg pg-cover">
